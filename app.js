@@ -7,6 +7,10 @@ const app = express()
 const PORT = process.env.PORT
 const NBC_WEBSITE = process.env.NBC_WEBSITE
 
+app.get('/', (req, res) => {
+    res.send('NBC Exchange Rate');
+});
+
 app.get('/nbc-exchange-rate', (req, res) => {
     const date = req.query.date ?? '';
     console.log(date);
