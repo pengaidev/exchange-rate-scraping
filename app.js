@@ -37,13 +37,13 @@ async function scrape(date) {
     // Navigate the page to a URL
     await page.goto(NBC_WEBSITE);
 
-    await page.focus('#datepicker');
-    await page.keyboard.down('Control');
-    await page.keyboard.press('A');
-    await page.keyboard.up('Control');
-    await page.keyboard.press('Backspace');
-    await page.keyboard.type(date);
-    await page.click('input[type="submit"]');
+    // await page.focus('#datepicker');
+    // await page.keyboard.down('Control');
+    // await page.keyboard.press('A');
+    // await page.keyboard.up('Control');
+    // await page.keyboard.press('Backspace');
+    // await page.keyboard.type(date);
+    // await page.click('input[type="submit"]');
 
     let data = await page.evaluate(() => {
         let date = document.querySelector("#fm-ex > table > tbody > tr:nth-child(1) > td > font").innerText
